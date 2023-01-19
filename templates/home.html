@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fulstack Developer - Malcolm Vernon</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-size: 2rem;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-top: 2%;
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+    a,p,h1,h2,h3, h4{
+        text-align: center;
+    }
+    ikmg {
+        height: 100%;
+        width: 100%;
+       
+    }
+    .top {
+        width: 100%;
+        height: 400px;
+        background-color: #849189;
+        border-radius: 40px;
+    }
+    .flex_wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        gap: 20%;
+    }
+
+    .main_picture_div {
+        width: 20%;
+        height: 200px;
+        background-color: rgb(57, 57, 56);
+    }
+
+    .main_jpg {
+        width: 100%;
+        height: 100%;
+        padding: 40px;
+        opacity: 0.8;
+        border-radius: 50px;
+    }
+
+    .portfolio {
+        background-color: rgb(249, 225, 192);
+        min-height: 1000px;
+        width: 100%;
+        
+        }
+    
+</style>
+
+<body>
+    <section class = "top">
+    <div class=flex_wrapper>
+        <div class="main_picture_div">
+            <img class="main_jpg" src="/static/profile.jpg">
+        </div>
+        <div>
+            <h1>Full Stack Developer & SEO</h1>
+            <h3> Malcolm Vernon</h3>
+            <h4>Largo,Fl</h4>
+            <p>Python | Flask | HTML | JavaScript </p>
+        </div>
+        <div><p style="Display:none;">Hello Im currently working through </p></div>
+        <div></div>
+
+    </div>
+</section>
+<section class = "portfolio">
+    <h1>Portfolio</h1>
+
+            <a href=https://www.flightticketfinder.com>Flight Ticket Finder</a>
+
+             <div class="flex_wrapper" style = "flex-wrap: wrap;">
+                <div style = "width:50%";><p>Flight Ticket Finder is a website I made with python, and flask for the back end. &nbsp;The front end utilizes vanilla Javascript and CSS. My goal here was to make a live application, that I could practice my developer skill on and also &nbsp;Currently deployed on Pythonanywhere.com</p>
+                </div>
+                <div style = "width:30%"><img src="/static/flightticketfinder.png"></div>
+            </div>
+           
+            
+    
+            <a href=https://rockygreenking.com>RockyGreenking.com</a>
+            <div class="flex_wrapper" style = "flex-grow: 1;">
+            <div><p>RockyGreenKing.Com is a Shopify Website I launched in 2017. Worked on it when I could as I worked my main job. Site Includes, customized dropdowns and CSS I programmed in for enhanced functionality. The site currently generates 7,000 Unique visits a month. And about $1000-$3000 in monthly sales.&nbsp;</p>
+            </div>
+            <div><img src="/static/rocky.png"></div>
+
+</ul>
+</section>
+</body>
+
+</html>
