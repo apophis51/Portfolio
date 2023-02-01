@@ -6,7 +6,14 @@ body {
     margin-top: 2%;
     margin-right: 5%;
     margin-left: 5%;
-    background-color: rgb(237, 244, 250);
+    background-color: rgb(80, 82, 84);
+}
+hr{
+    height: 20px;
+    width: 100%;
+    background-color: #b2b2b2;
+    box-shadow: 0px 0px 12px 1px #080F02;
+
 }
 a,p,h1,h2,h3, h4{
     text-align: center;
