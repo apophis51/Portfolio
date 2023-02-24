@@ -26,7 +26,7 @@
     <div class=flex_wrappertop>
         <div class="main_picture_div">
             <div>
-            <img class="main_jpg" src="/static/profile.jpg">   
+            <img class="main_jpg" style="height: 100%; width: 100%; min-height: auto;"    src="/static/profile.jpg">   
         </div>
         </div>
         <div class = "heading_block">
@@ -46,40 +46,43 @@
 <p class = "border" style = "padding: 10px; text-align: center; background-color:bisque;">Programming and SEO 24/7 ;)</p>
 
 <section class = "portfolio border">
-    <!-- Test -->
+    
     <h1 style = " background-color: rgb(227, 234, 227); ">Portfolio</h1>
-    <div class="flex_wrapper">
-        <div style = "flex:1 1 45%; ">            
-            <h2 style = "margin-bottom: 10%;">Rocky Seo Tracker</h2><p><b>Stack & Tech:</b>  Python, Flask, CSS, JavaScript, GPT3</p>
-            <p><b>Description: </b>Flight Ticket Finder is a website I made with python, and flask for the back end. &nbsp;The front end utilizes vanilla Javascript and CSS. My goal here was to make a live application, that I could practice my developer skills on. The backend of the site is connected to the GPT3 API, that automatically generates articles for the site (currently 200+ generated blogs) that I fact check. &nbsp;Currently deployed on Pythonanywhere.com</p><p>I push and pull changes with GIT.</p>
-        </div>
-        <div style = "min-height:100%; flex: 1 1 45%"><img src="/static/seotool.png"></div>
-    </div>
-    <!-- TEST -->
-             <div class="flex_wrapper">
-                <div style = "flex:1 1 45%; ">            
-                    <h2 style = "margin-bottom: 10%;"><a href=https://www.flightticketfinder.com>Flight Ticket Finder</a></h2><p><b>Stack & Tech:</b>  Python, Flask, CSS, JavaScript, GPT3</p>
+    
+             <div class="flex_wrapper" >
+                <div style = "flex:1 1 47%; max-height: 500px; overflow: scroll;">            
+                    <h2 style = "margin-bottom: 10%; "><a href=https://www.flightticketfinder.com>Flight Ticket Finder</a></h2><p><b>Stack & Tech:</b>  Python, Flask, CSS, JavaScript, GPT3</p>
                     <p><b>Description: </b>Flight Ticket Finder is a website I made with python, and flask for the back end. &nbsp;The front end utilizes vanilla Javascript and CSS. My goal here was to make a live application, that I could practice my developer skills on. The backend of the site is connected to the GPT3 API, that automatically generates articles for the site (currently 200+ generated blogs) that I fact check. &nbsp;Currently deployed on Pythonanywhere.com</p><p>I push and pull changes with GIT.</p>
                 </div>
-                <div style = "flex:1 1 45%; "><img src="/static/flightticketfinder.png"></div>
+                <div style = "flex:1 1 46%; "><img src="/static/flightticketfinder.png"></div>
             </div>
             <div><hr></div>
         <!-- TEST -->
-            <div  class="flex_wrapper">
-                <div style = "flex:1 1 45%; ">            
+            <div  class="flex_wrapper" style = "background-color: rgb(231, 255, 189);">
+                <div style = "flex:1 1 43%; ">            
                     <h2 style = "margin-bottom: 10%;"><a href=https://rockygreenking.com>RockyGreenking</a></h2>
                     <p><b>Stack:</b>Shopify + custom JavaScript, CSS</p>
-                    <p><b>Description: </b>RockyGreenKing.Com is a Shopify Website I launched in 2017. Worked on it when I could as I worked my main job. Site Includes, customized dropdowns and CSS I programmed in for enhanced functionality. The site currently generates 7,000 Unique visits a month. And about $1000-$3000 in monthly sales.&nbsp;</p>>
+                    <p><b>Description: </b>RockyGreenKing.Com is a Shopify Website I launched in 2017. Worked on it when I could as I worked my main job. Site Includes, customized dropdowns and CSS I programmed in for enhanced functionality. The site currently generates 7,000 Unique visits a month. And about $1000-$3000 in monthly sales.&nbsp;</p>
                 </div>
-                <div style = "flex:1 1 45%; "><img src="/static/rocky.png"></div>
+                <div style = "flex:1 1 43%; "><img src="/static/rocky.png"></div>
             </div>
+            <!-- Test -->
+            <div><hr></div>
+    <div class="flex_wrapper">
+        <div style = "flex:1 1 47%; max-height: 500px; overflow: scroll; ">            
+            <h2 style = "margin-bottom: 10%;">Rocky Seo Tracker</h2><p><b>Stack & Tech:</b>Python, Flask, CSS, JavaScript</p>
+            <p><b>Description: </b>The Rockygreenking SEO tracker is an ongoing project that im developing to keep track of my SEO efforts. So basically instead of having to keep track of keywords on one spreadhseet, blogs on another spreadsheet, changes on another spread sheet, and inventory on another sheet... I'll have page card to keep track of every single change that dynamically updates itself through the API.<p>If im ever analyzing site rankings and wondering "what caused my traffic to increase?", I can quickly reference edits Inputted into the card and it will even tell me "You did an edit this day"... traffic up this much."  </p><b>Program Implementation: </b><p>Python Does the initial sort on the Server Side Through Flask --Sends a Json file to    ---->   to the Front end  where JavaScript dynamically generates everything into HTML cards, sorts, and rearanges how I want to view the data. Any changes made to the data are sent in a Json file back to the server side Python WVC Controller where it reindexes that information to the master copy and saves it. I'm currently adding  more update boxes.... sorting features, and my comparason functions. I will also be creating a widget extentions and connect it to this application through Json</p>
+        </div>
+        <div style = "min-height:100%; flex: 1 1 45%;"><img src="/static/seotool.png"></div>
+    </div>
+    <!-- TEST -->
             <div><hr></div>
         <!-- TEST -->
-            <div  class="flex_wrapper">
+            <div  class="flex_wrapper" style="background-color: black; color: rgb(19, 226, 29);">
                 <div style = "flex:1 1 45%; ">            
                     <h2 style = "margin-bottom: 10%;"><a href=https://github.com/apophis51/Malcolm_chrome_extention>Matrix Widget</a></h2>
-                    <p style = "background-color: aliceblue;"><b>Stack:</b>JavaScript & CSS Injection + Chrome Widget</p>
-                    <p style = "background-color: aliceblue;"><b>Description: </b>This is my first attempt at creating a Google Chrome Widget. It will inject an annoying Matrix background into any page you visit (but might be cool if you like that ;) ) The instalation instructions are included in the readme when you click my github repo link</p>
+                    <p><b>Stack:</b>JavaScript & CSS Injection + Chrome Widget</p>
+                    <p ><b>Description: </b>This is my first attempt at creating a Google Chrome Widget. It will inject an annoying Matrix background into any page you visit (but might be cool if you like that ;) ) The instalation instructions are included in the readme when you click my github repo link</p>
                     
                 </div>
                 <div style = "flex:1 1 45%; "><img src="/static/google.png"></div>

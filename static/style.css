@@ -23,7 +23,8 @@ a,p,h1,h2,h3, h4{
     /* color: white  */
 }
 img {
-    height: 100%;
+    min-height: 500px;
+    /* height: 100%; */
     width: 100%; 
 }
 .top {
@@ -65,7 +66,7 @@ background-color: #840b2a; */
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    width: 100%;
+    width: 97%;
     height: 100%;
     gap: 1%;
 
