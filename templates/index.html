@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/style.css">
+ 
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
     <title>Portfolio - Malcolm Vernon</title>
 </head>
@@ -19,6 +21,7 @@
             <ul>
                 <li><a href= "/"  >Home</a></li>
                 <li><a href="/about">About</a></li>
+                <li><a href="/leetcode">LeetCode</a></li>
             </ul>
         </nav>
      </header>
@@ -29,12 +32,13 @@
             <img class="main_jpg" style="height: 100%; width: 100%; min-height: auto;"    src="/static/peru.jpg">   
         </div>
         </div>
-        <div class = "heading_block">
+        <div class = "heading_block" >
             <h3 > Malcolm Vernon</h3>
             <div ></div>
             <h1>Transitioning from SEO to FullStack Developer</h1>
             <h3>Open for Hire!</h3>
             <h3>Baby!</h3>
+            
             <h4>Largo,FL</h4>
             <p>Python | Flask | HTML | JavaScript | some .Liquid(Shopify)</p>
             <h5>BootCamp In Prog: Learning Express, React, PostgreSql</h5>
@@ -47,8 +51,18 @@
     </div>
 
 </section>
+<div style= 'display: flex; align-items: center; justify-content: center; z-index: 1;' onclick="console.log('click');window.location.href='/leetcode'">
+<p class = "border typed" style = "padding: 10px; text-align: center; background-color:bisque; min-width: 100%; min-height: 40px; z-index: 0;">
+</p></div>
 
-<p class = "border" style = "padding: 10px; text-align: center; background-color:bisque;">Programming and SEO 24/7 ;)</p>
+    
+    <script>var typed = new Typed('.typed',{ 
+        strings: ['<a href = "/leetcode">L</a>eet CODE Problems Solved: 1</a>','<a href = "/leetcode">Leet CODE Problems Solved: 1</a>'],
+        typeSpeed: 200,
+        loop: true
+    } )
+
+    </script>
 
 <section class = "portfolio border">
     

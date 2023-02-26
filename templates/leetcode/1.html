@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+    {% block content %}
+    <title>Document</title>
+    <script defer src = "/static/prism.js"></script>
+    <link rel="stylesheet" href="/static/prism.css">
+    <!-- pre tag prevents tag/spaces/ and breaks from being ignored -->
+    <!-- <code> tells the browser and google not to render the codee</code> -->
+    <!-- <refereance> https://www.codiga.io/blog/display-code-snippets-in-html/</refereance> -->
+    
+    <div class="px-5 pt-4" style="background-color: aliceblue"><div class="_1l1MA"><h1><a href = "https://leetcode.com/problems/two-sum/">Problem 1: Two Sum</a></h2><p>Given an array of integers <code>nums</code>&nbsp;and an integer <code>target</code>, return <em>indices of the two numbers such that they add up to <code>target</code></em>.</p>
+
+        <p>You may assume that each input would have <strong><em>exactly</em> one solution</strong>, and you may not use the <em>same</em> element twice.</p>
+        
+        <p>You can return the answer in any order.</p>
+        
+        <p>&nbsp;</p>
+        <p><strong class="example">Example 1:</strong></p>
+        
+        <pre><strong>Input:</strong> nums = [2,7,11,15], target = 9
+        <strong>Output:</strong> [0,1]
+        <strong>Explanation:</strong> Because nums[0] + nums[1] == 9, we return [0, 1].
+        </pre>
+        
+        <p><strong class="example">Example 2:</strong></p>
+        
+        <pre><strong>Input:</strong> nums = [3,2,4], target = 6
+        <strong>Output:</strong> [1,2]
+        </pre>
+        
+        <p><strong class="example">Example 3:</strong></p>
+        
+        <pre><strong>Input:</strong> nums = [3,3], target = 6
+        <strong>Output:</strong> [0,1]
+        </pre>
+        
+        <p>&nbsp;</p>
+        <p><strong>Constraints:</strong></p>
+        
+        <ul>
+            <li><code>2 &lt;= nums.length &lt;= 10<sup>4</sup></code></li>
+            <li><code>-10<sup>9</sup> &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>
+            <li><code>-10<sup>9</sup> &lt;= target &lt;= 10<sup>9</sup></code></li>
+            <li><strong>Only one valid answer exists.</strong></li>
+        </ul>
+        
+        </div></div>
+        <div>
+    <h2>Malcolm's Solution:</h2>
+    <pre> 
+    <code class = "language-javascript">/**
+        * @param {number[]} nums
+        * @param {number} target
+        * @return {number[]}
+        */
+       var twoSum = function(nums, target) {
+           
+           let accumulator = []
+           let accu2 = 0
+           for(let x = 0 ; x <= nums.length; x++){
+               for(let y = x +1; y <= nums.length; y++)
+               { 
+                   accu2 = nums[x] + nums[y]
+                   if (accu2 == target){
+                       accumulator.push(x)
+                       accumulator.push(y)
+                       return accumulator
+                   }
+               }
+           }
+           return accumulator
+       };</code></pre>
+       
+        <img src = "/static/1.png">
+    </div>
+</body>
+</html>
+
+{% endblock %}
