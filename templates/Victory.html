@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type = "text/javascript"> 
+        // let data = '{{output|safe}}' 
+        let jsoninput = '{{jsonlist|safe}}'
+        </script>
+    
+    <script src = "static/dataScript.js"   defer ></script>
+
+        
+</head>
+<body>
+    <form action = "/shawnn" method = "post" >
+        
+        <textarea class = "payload" name = "payload" style="width: 700px; height: 300px"></textarea>
+        <button style="width: 100px; height: 100px"><p>send payload</p></button>
+    </form>
+
+
+    <!-- <input type="text" id="input" placeholder="Enter a Keyterm" style="width: 700px; height: 300px"> -->
+
+    <p>{{jsonlist}}
+    </p>
+        
+</body>
+</html>

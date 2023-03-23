@@ -6,15 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <section>
+<style>
+    a:visited {color:rgb(63, 120, 169)}
+    a:hover {color: aqua}
+    a:link {color:yellow}
+</style>
+<body style = "background-color: aquamarine; color:rgb(0, 129, 242); ">
+    <header>
+        <nav>
+            <a href = "/">This will be a home link</a>
+            <a href = "/">This will be another link</a>
+        </nav>
+    </header>
+    <section style = "display: flex; flex-wrap: wrap; column-gap: 20px;padding: 10%">
+        <div>
         <!-- //inline block only takes the space that it needs -->
         <img style = "min-width: 20%;background-color: aqua;" src="https://t3.ftcdn.net/jpg/01/71/98/14/360_F_171981494_N2TgGBGJy0m3NaURXgxQ2H080eUyFnET.jpg">
+        </div>
+
+        <div style = "background-color: rgb(183, 212, 237); flex: 0 1 20%">
         <p>some text</p>
         <p style="display: inline-block; background-color: aqua; font-size: 1.1 rem;"> some text</p>
         <p style="background-color: aqua; font-size: 1.1 rem"> some text</p>
         <p> some text</p>
+        </div>
+
+        <!-- min and max overwrites flex shrink and flex grow -->
+        <div style="flex: 100%"></div>
+
+        
+        <div style = "display: flex; flex-wrap: wrap; column-gap: 20px; padding: 10%">
+        <div style = "background-color: yellow; min-height: 200px; min-width: 200px; flex: 1 1 100%"></div>
+        <div style = "background-color: brown; min-height: 200px; min-width: 200px; flex: 1 1 50%"></div>
+        <div style = "background-color: rgb(42, 140, 165); min-height: 200px; min-width: 200px; flex: 1 0 48%"></div>
+        <div style = "background-color: yellow; min-height: 200px; max-height: 200px; min-width: 200px; flex: 1 1 100%"><img style = "min-width: 100%; max-height:100%" src="https://t3.ftcdn.net/jpg/01/71/98/14/360_F_171981494_N2TgGBGJy0m3NaURXgxQ2H080eUyFnET.jpg"></div>
+        </div>
+
+        <div>
+        <div style="background-color: rgb(41, 155, 155); min-height: 500px; flex: .1 0 10%"><p>side Nav</p></div>
+
+        <div style = "display: flex; column-gap: 5px; min-width: 10%; padding-left: 1%; padding-right: 10%;">
+        <div style = "background-color: rgb(36, 210, 117); min-height: 200px;  flex: 1 0 30%"></div>
+        <div style = "background-color: rgb(16, 114, 134); min-height: 200px;  flex: 1 0 30%"></div>
+        <div style = "background-color: rgb(198, 220, 29); min-height: 100px;  flex: 1 0 30%"></div>
+        <div style = "flex: 1 1 30%"><img  style = "width: 100%" src="https://t3.ftcdn.net/jpg/01/71/98/14/360_F_171981494_N2TgGBGJy0m3NaURXgxQ2H080eUyFnET.jpg"></div>
+        
+        <div style = "background-color: rgb(183, 47, 196); min-height: 200px; min-width: 200px; flex: 1 1 30%"</div>
+        <div style = "background-color: rgb(39, 17, 41); min-height: 200px;  flex: 1 1 30%"></div>
+        </div>
     </section>
+    <img  src="https://t3.ftcdn.net/jpg/01/71/98/14/360_F_171981494_N2TgGBGJy0m3NaURXgxQ2H080eUyFnET.jpg">
+
     
 </body>
 </html>
