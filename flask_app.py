@@ -1,19 +1,28 @@
 from flask import Flask, render_template, request
+from flask import jsonify
+import pickle
+import json
+from markupsafe import Markup
 
 app = Flask(__name__)
 import requests
 
-url = "https://app.amattendees.com/v2/getdata.php?query=Anna Andreyev&intent=all"
+# url = "https://app.amattendees.com/v2/getdata.php?query=Anna&intent=all"
 
-payload={}
-headers = {
-  'Cookie': 'PHPSESSID=921020764f422f4cb7a1a69853e08186'
-}
+# payload={}
+# headers = {
+#   'Cookie': 'PHPSESSID=921020764f422f4cb7a1a69853e08186'
+# }
 
-response = requests.request("GET", url, headers=headers, data=payload)
+# response = requests.request("GET", url, headers=headers, data=payload)
 
+# pickle.dump(response, open("page1.pickle", "wb"))
+
+# print(response.text)
+
+response = pickle.load(open("page1.pickle", "rb"))
 print(response.text)
-
+tiger = response.text
 
 
 @app.route('/')
@@ -39,7 +48,13 @@ def test():
 @app.route('/shawn' , methods=['POST', "GET"])
 def shawn():
         if request.method == 'GET':
-         return render_template("Victory.html")
+        #  return render_template("Victory.html", jsonlist = response.json())
+            # return render_template("Victory.html", jsonlist = jsonify(response.json()))
+            # return render_template("Victory.html", jsonlist= response.text)
+            # return render_template("Victory.html", jsonlist = Markup(tiger))
+            # return render_template("Victory.html", jsonlist = response.json())
+            return render_template("Victory.html", jsonlist = "cool")
+        
         
 @app.route('/shawnn' , methods=['POST', "GET"])
 def shawnn():
@@ -54,9 +69,18 @@ def shawnn():
         }
 
         responsee = requests.request("GET", url, headers=headers, data=payload)
-
         
 
+        # responsee = response
 
 
-        return render_template('Victory.html', jsonlist = responsee.json())
+        output = ""
+        for x in responsee.json():
+             output += "\n\n\n" + f'{x}'  + 'next'
+            
+        return render_template("Victory.html", jsonlist = responsee.json())
+
+
+        # return render_template('Victory.html', jsonlist = output)
+
+

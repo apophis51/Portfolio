@@ -5,7 +5,7 @@
     <title>Document</title>
     <script type = "text/javascript"> 
         // let data = '{{output|safe}}' 
-        let jsoninput = '{{jsonlist|safe}}'
+        let jsoninput = '{{jsonlist|tojson|safe}}'
         </script>
     
     <script src = "static/dataScript.js"   defer ></script>
@@ -18,6 +18,9 @@
         <textarea class = "payload" name = "payload" style="width: 700px; height: 300px"></textarea>
         <button style="width: 100px; height: 100px"><p>send payload</p></button>
     </form>
+    <div class = "results">
+        
+    </div>
 
 
     <!-- <input type="text" id="input" placeholder="Enter a Keyterm" style="width: 700px; height: 300px"> -->
