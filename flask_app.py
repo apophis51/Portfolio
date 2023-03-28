@@ -20,9 +20,9 @@ import requests
 
 # print(response.text)
 
-response = pickle.load(open("page1.pickle", "rb"))
-print(response.text)
-tiger = response.text
+# response = pickle.load(open("page1.pickle", "rb"))
+# print(response.text)
+# tiger = response.text
 
 
 @app.route('/')
