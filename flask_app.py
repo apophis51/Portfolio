@@ -1,8 +1,8 @@
 from flask import Flask, render_template, request
-from flask import jsonify
+# from flask import jsonify
 import pickle
-import json
-from markupsafe import Markup
+# import json
+# from markupsafe import Markup
 
 app = Flask(__name__)
 import requests
