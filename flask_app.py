@@ -33,6 +33,10 @@ def home():
 def about():
     return render_template("about.html")
 
+@app.route('/react')
+def react():
+    return render_template("react.html")
+
 @app.route('/leetcode')
 def leetcode():
     return render_template("leet-code-index.html")
