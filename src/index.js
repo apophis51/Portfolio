@@ -4,6 +4,9 @@ import { createRoot } from "react-dom/client";
 import { Uploadfile } from "./components/uploadfile";
 import{ VoiceTranscription } from "./components/";
 
+import store from "./store";
+import { Provider } from "react-redux"
+
 
 
 /* Import and destructure main from src/component/index.js 
@@ -21,6 +24,8 @@ root.render(
         <h1 className="text-4xl">MalcMind</h1>
          </div>
          </div>
+         <Provider store={store}>
           <VoiceTranscription />
+          </Provider>
      </div>
 )
