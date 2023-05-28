@@ -66,7 +66,7 @@ def upload():
 def about():
     return render_template("about.html")
 
-@app.route('/react')
+@app.route('/voicetranscriptions')
 def react():
     return render_template("react.html")
 

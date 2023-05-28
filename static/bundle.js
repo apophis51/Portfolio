@@ -4735,7 +4735,7 @@ var Uploadfile = /*#__PURE__*/function (_Component) {
       if (_this.state.selectedFile) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement("h2", null, "File Details:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement("p", null, "File Name: ", _this.state.selectedFile.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement("p", null, "File Type: ", _this.state.selectedFile.type), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement("p", null, "Last Modified:", " ", _this.state.selectedFile.lastModifiedDate.toDateString()));
       } else {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement("h4", null, "Choose before Pressing the Upload button"));
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement("h4", null, "Choose before Pressing the Upload button (if a print box opens, please close - its a known bug)"));
       }
     });
     return _this;
