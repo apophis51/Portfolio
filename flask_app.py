@@ -1,17 +1,13 @@
 from flask import Flask, render_template, request
-# from flask import jsonify
 import pickle
-# import json
-# from markupsafe import Markup
-import os
 
 
 import openai
 openai.api_key = "sk-WdkX1gmuhl6JW6G1XkUaT3BlbkFJ6qYU6pODEbF25LBzPKG"
-audio_file = open("run.mp3", "rb")
-transcript = openai.Audio.transcribe("whisper-1", audio_file)
+# audio_file = open("uploadmp3/run.mp3", "rb")
+# transcript = openai.Audio.transcribe("whisper-1", audio_file)
 
-print(transcript)
+# print(transcript)
 
 
 
@@ -54,24 +50,23 @@ def upload():
     print("**************************************************************************",request.files['file'])
 
     file = request.files['file']
-    print("**************************************************************************",file.filename)
-    
-    # Perform any necessary validation or processing on the file
-    
-    # Save the file to a desired location
-    
-    file.save('uploadmp3/'+ file.filename)
-    # file.save(os.path.join('../uploadmp3', file.filename))
-    # file.save(os.path.join(app.root_path, file.filename))
 
     
-    return 'File uploaded successfully!', 200
+    file.save('uploadmp3/'+ file.filename)
+    audio_file = open('uploadmp3/'+ file.filename, "rb")
+    transcript = openai.Audio.transcribe("whisper-1", audio_file)
+    print(transcript["text"])
+
+    # return render_template("Victory.html", jsonlist = "cool")
+    # return transcript["text"], 200
+    return transcript["text"]
+
 
 @app.route('/about')
 def about():
     return render_template("about.html")
 
-@app.route('/react')
+@app.route('/voicetranscriptions')
 def react():
     return render_template("react.html")
 

@@ -1,11 +1,23 @@
 import React, { useEffect, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchGPT } from "./uploadSlice";
+
+
 import  UploadFile  from "../components/uploadfile"
 
 
 // the route is localhost:3000/voicetransctipiton
 
 const VoiceTranscription = () => {
-  const [transcription, setTranscription] = useState("Test");
+  const dispatch = useDispatch();
+
+  const gptText = useSelector((state) => state.uploadSlice.gptText.data);
+  const [transcription, setTranscription] = useState("Your file will appear here a few seconds after you upload it.");
+
+
+  useEffect(() => {
+    setTranscription(gptText);
+   }, [gptText]);
 
 
   return (

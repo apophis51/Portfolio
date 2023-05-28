@@ -1,7 +1,11 @@
 
 import axios from 'axios';
-  
+import { useSelector, useDispatch } from "react-redux";
+import { connect } from 'react-redux';
+
+
 import React,{Component} from 'react';
+import { fetchGPT } from "./uploadSlice"
   
 export class Uploadfile extends Component {
    
@@ -13,14 +17,16 @@ export class Uploadfile extends Component {
      
     // On file select (from the pop up)
     onFileChange = event => {
-     
+      event.preventDefault();
       // Update the state
       this.setState({ selectedFile: event.target.files[0] });
      
     };
      
     // On file upload (click the upload button)
-    onFileUpload = () => {
+    // onFileUpload = () => {
+      onFileUpload = (event) => {
+      event.preventDefault();
      
       // Create an object of formData
       const formData = new FormData();
@@ -37,9 +43,8 @@ export class Uploadfile extends Component {
      
       // Request made to the backend api
       // Send formData object
-      // axios.post("api/uploadfile", formData);
-      axios.post("/upload", formData);
-
+      //  axios.post("/upload", formData);
+      this.props.fetchGPT(formData);
     };
      
     // File content to be displayed after
@@ -66,7 +71,7 @@ export class Uploadfile extends Component {
         return (
           <div>
             <br />
-            <h4>Choose before Pressing the Upload button</h4>
+            <h4>Choose before Pressing the Upload button (if a print box opens, please close - its a known bug)</h4>
           </div>
         );
       }
@@ -76,15 +81,10 @@ export class Uploadfile extends Component {
      
       return (
         <div>
-            <h1>
-              GeeksforGeeks
-            </h1>
-            <h3>
-              File Upload using React!
-            </h3>
+           
             <div>
                 <input type="file" onChange={this.onFileChange} />
-                <button onClick={this.onFileUpload}>
+                <button className="btn" onClick={this.onFileUpload}>
                   Upload!
                 </button>
             </div>
@@ -94,4 +94,9 @@ export class Uploadfile extends Component {
     }
   }
   
-  export default Uploadfile;
+//  export default Uploadfile;
+  const mapDispatchToProps = {
+    fetchGPT
+  };
+
+  export default connect(null, mapDispatchToProps)(Uploadfile);
