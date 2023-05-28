@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.textarea-box {
+    position: relative;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+    padding: 10px;
+  }
+
+  .textarea-input {
+    border-radius: 3px;
+    outline: none;
+    padding: 10px;
+    width: 750px;
+    min-height: 200px;
+    border: none;
+    margin-top: 10px;
+    font-size: 16px;
+    resize: none;
+  }
+  .image
+  {
+    width: 600px;
+    /* height: auto */
+    width: auto;
+    height: 300px
+  }
+  .imagebox
+  {
+    height: 300px;
+  }
+  .file{
+    background-color: blue;
+  }

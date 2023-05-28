@@ -2462,6 +2462,69 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./src/components/VoiceTranscription.js":
+/*!**********************************************!*\
+  !*** ./src/components/VoiceTranscription.js ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_uploadfile__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/uploadfile */ "./src/components/uploadfile.js");
+
+
+
+// the route is localhost:3000/voicetransctipiton
+
+var VoiceTranscription = function VoiceTranscription() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "campus-container flex bg-green-950"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
+    className: ""
+  }, " AI VoiceTranscription - by MalcMind"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "imagebox"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+    className: "image",
+    src: "https://nordicapis.com/wp-content/uploads/5-Best-Speech-to-Text-APIs-2-e1615383933700.png"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "VoiceTransctription by MalcMind: allows you to extract text from audio formats mp3 , mp4 , mpeg , mpga , m4a , wav , and webm audio formats. Upload your audio file and click convert to recieve text output. "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_uploadfile__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    className: "flex gap-10 justify-between btn"
+  }, "Download Output File"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "textarea-box"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("textarea", {
+    className: "textarea-input",
+    placeholder: "Enter your note here...",
+    value: "{text}"
+    //   onChange={(e) => setText(e.target.value)}
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null));
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (VoiceTranscription);
+
+/***/ }),
+
+/***/ "./src/components/index.js":
+/*!*********************************!*\
+  !*** ./src/components/index.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "VoiceTranscription": () => (/* reexport safe */ _VoiceTranscription_js__WEBPACK_IMPORTED_MODULE_1__["default"]),
+/* harmony export */   "uploadfile": () => (/* reexport safe */ _uploadfile_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+/* harmony export */ });
+/* harmony import */ var _uploadfile_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./uploadfile.js */ "./src/components/uploadfile.js");
+/* harmony import */ var _VoiceTranscription_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./VoiceTranscription.js */ "./src/components/VoiceTranscription.js");
+
+
+
+/***/ }),
+
 /***/ "./src/components/uploadfile.js":
 /*!**************************************!*\
   !*** ./src/components/uploadfile.js ***!
@@ -36030,6 +36093,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
 /* harmony import */ var _components_uploadfile__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/uploadfile */ "./src/components/uploadfile.js");
+/* harmony import */ var _components___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/ */ "./src/components/index.js");
+
 
 
 
@@ -36040,7 +36105,16 @@ and anything else you may need here */
 
 var container = document.getElementById("root");
 var root = (0,react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot)(container);
-root.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_uploadfile__WEBPACK_IMPORTED_MODULE_2__.Uploadfile, null));
+root.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  id: "main ",
+  className: "bg-green-950 text-white px-30 text-xl px-80"
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  className: " "
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  id: ""
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
+  className: "text-4xl"
+}, "MalcMind"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components___WEBPACK_IMPORTED_MODULE_3__.VoiceTranscription, null)));
 })();
 
 /******/ })()
