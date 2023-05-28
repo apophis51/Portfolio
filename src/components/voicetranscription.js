@@ -5,8 +5,11 @@ import  UploadFile  from "../components/uploadfile"
 // the route is localhost:3000/voicetransctipiton
 
 const VoiceTranscription = () => {
+  const [transcription, setTranscription] = useState("Test");
+
 
   return (
+    
     <div className='campus-container flex bg-green-950'>
       <div>
       <h1 className=""> AI VoiceTranscription - by MalcMind</h1>
@@ -27,11 +30,11 @@ audio formats. Upload your audio file and click convert to recieve text output. 
               <p className='flex gap-10 justify-between btn'>Download Output File</p>
               
 
-<div className={"textarea-box"}>
+<div className={"textarea-box text-black"}>
       <textarea
       className={"textarea-input"}
       placeholder={"Enter your note here..."}
-      value="{text}"
+      value= {transcription}
     //   onChange={(e) => setText(e.target.value)}
       
       />

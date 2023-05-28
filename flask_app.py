@@ -5,6 +5,23 @@ import pickle
 # from markupsafe import Markup
 import os
 
+
+import openai
+openai.api_key = "sk-WdkX1gmuhl6JW6G1XkUaT3BlbkFJ6qYU6pODEbF25LBzPKG"
+audio_file = open("run.mp3", "rb")
+transcript = openai.Audio.transcribe("whisper-1", audio_file)
+
+print(transcript)
+
+
+
+
+
+
+
+
+
+
 app = Flask(__name__)
 import requests
 
