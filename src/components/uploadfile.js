@@ -27,7 +27,7 @@ export class Uploadfile extends Component {
      
       // Update the formData object
       formData.append(
-        "myFile",
+        "file",
         this.state.selectedFile,
         this.state.selectedFile.name
       );
@@ -37,7 +37,9 @@ export class Uploadfile extends Component {
      
       // Request made to the backend api
       // Send formData object
-      axios.post("api/uploadfile", formData);
+      // axios.post("api/uploadfile", formData);
+      axios.post("/upload", formData);
+
     };
      
     // File content to be displayed after

@@ -3,6 +3,7 @@ from flask import Flask, render_template, request
 import pickle
 # import json
 # from markupsafe import Markup
+import os
 
 app = Flask(__name__)
 import requests
@@ -28,6 +29,26 @@ import requests
 @app.route('/')
 def home():
     return render_template("index.html")
+
+@app.route('/upload', methods=['POST'])
+def upload():
+    if 'file' not in request.files:
+        return 'No file part in the request', 400
+    print("**************************************************************************",request.files['file'])
+
+    file = request.files['file']
+    print("**************************************************************************",file.filename)
+    
+    # Perform any necessary validation or processing on the file
+    
+    # Save the file to a desired location
+    
+    file.save('uploadmp3/'+ file.filename)
+    # file.save(os.path.join('../uploadmp3', file.filename))
+    # file.save(os.path.join(app.root_path, file.filename))
+
+    
+    return 'File uploaded successfully!', 200
 
 @app.route('/about')
 def about():
