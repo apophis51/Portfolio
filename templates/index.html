@@ -18,7 +18,7 @@
 
     <header class = "border">
         <nav>
-            <ul>
+            <ul class="ul-top li-top">
                 <li><a href= "/"  >Home</a></li>
                 <li><a href="/about">About</a></li>
                 <li><a href="/leetcode">LeetCode</a></li>
@@ -39,7 +39,7 @@
             
             
             <h4>Largo,FL</h4>
-            <p>Python | Flask | HTML | JavaScript | Express | REACT | REDUX | PostgreSql | Node.js | TailwindCSS</p>
+            <p>Python | Flask | HTML | JavaScript | Express | REACT | REDUX | PostgreSql | Node.js | TailwindCSS | MaterialUI</p>
             <h5>Some Knowledge in: .Liquid(Shopify)</h5>
             <h5>Additional Libraries: Sequelize, Axios, Selenium</h5>
             <p><a href = 'https://www.linkedin.com/in/malcolm-vernon-5734bb1a/'>LinkdIn</a></p>
@@ -51,7 +51,7 @@
     </div>
 
 </section>
-<div style= 'display: flex; align-items: center; justify-content: center; z-index: 1;' onclick="console.log('click');window.location.href='/leetcode'">
+<div style= 'display: flex; align-items: center; justify-content: center; z-index: 1; opacity: 50;' onclick="console.log('click');window.location.href='/leetcode'">
 <p class = "border typed" style = "padding: 10px; text-align: center; background-color:bisque; min-width: 100%; min-height: 40px; z-index: 0;">
 </p></div>
 
@@ -67,9 +67,17 @@
 <section class = "portfolio border">
     
     <h1 style = " background-color: rgb(227, 234, 227); ">Portfolio</h1>
-    
+    <div  class="flex_wrapper" style = "background-color: rgb(231, 255, 189);">
+        <div style = "flex:1 1 43%; ">            
+            <h2 style = "margin-bottom: 10%;"><a href=https://rockygreenking.com>RockyGreenking</a></h2>
+            <p><b>Stack:</b>Shopify + custom JavaScript, CSS</p>
+            <p><b>Description: </b>RockyGreenKing.Com is a Shopify Website I launched in 2017. Worked on it when I could as I worked my main job. Site Includes, customized dropdowns and CSS I programmed in for enhanced functionality. The site currently generates 7,000 Unique visits a month. And about $1000-$3000 in monthly sales.&nbsp;</p>
+        </div>
+        <div style = "flex:1 1 43%; "><img src="/static/rocky.png"></div>
+    </div>
+    <div><hr></div>
              <div class="flex_wrapper" >
-                <div style = "flex:1 1 47%; max-height: 500px; overflow: auto;">            
+                <div style = "flex:1 1 47%; max-height: 500px; overflow: auto; ">            
                     <h2 style = "margin-bottom: 10%; "><a href=https://www.flightticketfinder.com>Flight Ticket Finder</a></h2><p><b>Stack & Tech:</b>  Python, Flask, CSS, JavaScript, GPT3</p>
                     <p><b>Description: </b>Flight Ticket Finder is a website I made with python, and flask for the back end. &nbsp;The front end utilizes vanilla Javascript and CSS. My goal here was to make a live application, that I could practice my developer skills on. I also wanted to test the SEO viability of machine generated articles. The backend of the site is connected to the GPT3 API, and I have it set to automatically generates articles for the site with a one click button push thats programmed thats automated through python(currently 200+ generated blogs) that I fact check. The article making process consists of a scraper automated through Selenium where I get all the proper flight distances and prices. I then have seperate script merge the flight data and prices into predefined prompts for GPT3. I can then generate each blog one by one. &nbsp;Currently deployed on Pythonanywhere.com</p><p>This is listed on my Github as wewll</p><p>Saw some initial rankings, and then it droped like it was hot. Im still testing it :)</p>
                 </div>
@@ -77,13 +85,20 @@
             </div>
             <div><hr></div>
         <!-- TEST -->
-            <div  class="flex_wrapper" style = "background-color: rgb(231, 255, 189);">
-                <div style = "flex:1 1 43%; ">            
-                    <h2 style = "margin-bottom: 10%;"><a href=https://rockygreenking.com>RockyGreenking</a></h2>
-                    <p><b>Stack:</b>Shopify + custom JavaScript, CSS</p>
-                    <p><b>Description: </b>RockyGreenKing.Com is a Shopify Website I launched in 2017. Worked on it when I could as I worked my main job. Site Includes, customized dropdowns and CSS I programmed in for enhanced functionality. The site currently generates 7,000 Unique visits a month. And about $1000-$3000 in monthly sales.&nbsp;</p>
+            <div  class="flex_wrapper text-white" style = "background-color: rgb(104, 0, 0);color: aliceblue;">
+                <div style = "flex:1 1 43%; max-height: 500px; overflow: auto;">            
+                    <h2 style = "margin-bottom: 10%;"><a href="https://flixquest-production.up.railway.app">FlixQuest</a></h2>
+                    <p><b>Stack:</b>Node.js, React, Redux, Tailwind, DaisyUI, APIs: GPT/Google/TMDB</p>
+                    <p><b>Description: </b>A digital movie store concept (similar to IMDB) with modernized features for enhanced movie searching. Search bar enables you to search movies by natural descriptions, as well as by movie title. Techstack Used: Node.js, React, Redux, Tailwind, DaisyUI, GPT/Google/TMDB - APIs</p>
+                        <ul id="FlixQuestUl">
+                            This was a group project for my senior phase of bootcamp and my responcibilities were:
+                            <li>Responsible for the design and implementation of the Search Bar and AI Logic</li>
+                            <li>Executed the Design and implementation of the stores API connections to GPT, Google, and TMDB for quick data retrieval when movies are requested</li>
+                            <li>Responsible for the Design and Implementation of the sites Redux state design, and Movie component views</li> 
+                            <li>Responsible for Deploying and maintaining the sites online status</li>
+                            <li>Corrected CSS design flaws that improved the sites usability and aesthetics</li>  </ul>
                 </div>
-                <div style = "flex:1 1 43%; "><img src="/static/rocky.png"></div>
+                <div style = "flex:1 1 43%; "><img src="/static/flixquest.png"></div>
             </div>
             <!-- Test -->
             <div><hr></div>

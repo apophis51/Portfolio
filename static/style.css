@@ -106,14 +106,15 @@ background-size:16px 16px; */
     width: 100%;
 
     }
-ul{
+.ul-top{
     display:flex;
     align-items: flex-end;
     justify-content: center;
     gap: 10px;
     background-color: rgb(249, 225, 192)
 }
-li {
+
+.li-top {
     list-style: none;
 }
 div{
