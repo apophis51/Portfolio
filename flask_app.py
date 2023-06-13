@@ -3,7 +3,7 @@ import pickle
 
 
 import openai
-openai.api_key = "sk-WdkX1gmuhl6JW6G1XkUaT3BlbkFJ6qYU6pODEbF25LBzPKG"
+openai.api_key = "sk-jVFD5HAxHNVJFb9RhPr9T3BlbkFJn7pYdxGowsceumcq"
 # audio_file = open("uploadmp3/run.mp3", "rb")
 # transcript = openai.Audio.transcribe("whisper-1", audio_file)
 
@@ -69,6 +69,10 @@ def about():
 @app.route('/voicetranscriptions')
 def react():
     return render_template("react.html")
+
+@app.route('/seopredictor')
+def seopredictor():
+    return render_template("seopredictor.html")
 
 @app.route('/leetcode')
 def leetcode():
