@@ -3,7 +3,7 @@ import pickle
 
 
 import openai
-openai.api_key = "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"
+openai.api_key = "sk-jVFD5HAxHNVJFb9RhPr9T3BlbkFJn7pYdxGowsceumcq"
 # audio_file = open("uploadmp3/run.mp3", "rb")
 # transcript = openai.Audio.transcribe("whisper-1", audio_file)
 
