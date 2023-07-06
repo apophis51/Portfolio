@@ -64,9 +64,180 @@
 
     </script>
 
+
+
+
+
+
+<style>
+    .bodyy {
+        height: 80vh;
+        display: grid;
+        place-items: center;
+      }
+      
+      .slider {
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .slide {
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        transition: all 0.5s;
+      }
+      
+      .slide img {
+        width: 100%;
+        height: 100%;
+      }
+      
+      .btn {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+        border: none;
+        border-radius: 50%;
+        z-index: 10px;
+        cursor: pointer;
+        background-color: #fff;
+        font-size: 18px;
+      }
+      
+      .btn:active {
+        transform: scale(1.1);
+      }
+      
+      .btn-prev {
+        top: 45%;
+        left: 2%;
+      }
+      
+      .btn-next {
+        top: 45%;
+        right: 2%;
+      }
+    </style>
+    <h1 style = " background-color: rgb(227, 234, 227); "> < React Projects > </h1>
+    
+    
+    <div class="bodyy" style = "background-color:rgb(197, 175, 150); max-height: 520px; ">
+        <!-- slider container -->
+        <div class="slider" style = " max-height: 500px; " >
+          <!-- slide 1 -->
+          <div class="slide">
+            <div  class="flex_wrapper" style = "background-color: rgb(0, 247, 255);">
+                <div style = "flex:1 1 43%; max-height: 500px; overflow: auto;">                 
+                    <h2 style = "margin-bottom: 10%;"><a href="/voicetranscriptions">VoiceTranscription</a></h2>
+                    <p><b>Stack:</b>React | Redux | Python | TailwindCSS | Whisper AI </p>
+                    <p><b>Description: </b>VoiceTranscription by MalcMind is an app I'll be launching on my new site MalcMind.com, Site is still underdevelopment but here is a beta test of one of the applications I will be launching. The application uses React/Redux for the frontend and a Python/Flask for the backend.&nbsp;</p>
+                </div>
+                <div style = "flex:1 1 43%; "><img src="/static/voice.png"></div>
+            </div>
+          </div>
+      
+          <!-- slide 2 -->
+          <div class="slide">
+            <div  class="flex_wrapper text-white" style = "background-color: rgb(104, 0, 0);color: aliceblue;">
+                    <div style = "flex:1 1 43%; max-height: 500px; overflow: auto;">            
+                        <h2 style = "margin-bottom: 10%;"><a href="https://flixquest-production.up.railway.app">FlixQuest</a></h2>
+                        <p><b>Stack:</b>Node.js, React, Redux, Tailwind, DaisyUI, APIs: GPT/Google/TMDB</p>
+                        <p><b>Description: </b>A digital movie store concept (similar to IMDB) with modernized features for enhanced movie searching. Search bar enables you to search movies by natural descriptions, as well as by movie title.</p>
+                            <ul id="FlixQuestUl">
+                                This was a group project for my senior phase of bootcamp and my responcibilities were:
+                                <p></p>
+                                <li>Responsible for the design and implementation of the Search Bar and AI Logic</li>
+                                <p></p>
+                                <li>Executed the Design and implementation of the stores API connections to GPT, Google, and TMDB for quick data retrieval when movies are requested</li>
+                                <p></p>
+                                <li>Responsible for the Design and Implementation of the sites Redux state design, and Movie component views</li> 
+                                <p></p>
+                                <li>Responsible for Deploying and maintaining the sites online status</li>
+                                <p></p>
+                                <li>Corrected CSS design flaws that improved the sites usability and aesthetics</li>  </ul>
+                    </div>
+                    <div style = "flex:1 1 43%; "><img src="/static/flixquest.png"></div>
+                </div>
+          </div>
+      
+          <!-- Control buttons -->
+          <button class="btn btn-next">></button>
+          <button class="btn btn-prev"><</button>
+        </div>
+      </div>
+      <script>
+        // JavaScript code
+        const slides = document.querySelectorAll(".slide"); // Get all slide elements
+        const nextBtn = document.querySelector(".btn-next"); // Get the next button
+        const prevBtn = document.querySelector(".btn-prev"); // Get the previous button
+        let currentIndex = 0; // Track the current slide index
+      
+        // Function to show the current slide
+        const showSlide = () => {
+          slides.forEach((slide, index) => {
+            if (index === currentIndex) {
+              slide.style.display = "block";
+            } else {
+              slide.style.display = "none";
+            }
+          });
+        };
+      
+        // Function to go to the next slide
+        const nextSlide = () => {
+          currentIndex++;
+          if (currentIndex >= slides.length) {
+            currentIndex = 0; // Start from the beginning if reached the last slide
+          }
+          showSlide();
+        };
+      
+        // Function to go to the previous slide
+        const prevSlide = () => {
+          currentIndex--;
+          if (currentIndex < 0) {
+            currentIndex = slides.length - 1; // Go to the last slide if reached the beginning
+          }
+          showSlide();
+        };
+      
+        // Event listeners for the next and previous buttons
+        nextBtn.addEventListener("click", nextSlide);
+        prevBtn.addEventListener("click", prevSlide);
+      
+        // Show the initial slide
+        showSlide();
+      </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h1 style = " background-color: rgb(227, 234, 227); ">Portfolio</h1>
+
+
 <section class = "portfolio border">
     
-    <h1 style = " background-color: rgb(227, 234, 227); ">Portfolio</h1>
+    
     <div  class="flex_wrapper" style = "background-color: rgb(231, 255, 189);">
         <div style = "flex:1 1 43%; ">            
             <h2 style = "margin-bottom: 10%;"><a href=https://rockygreenking.com>RockyGreenking</a></h2>
