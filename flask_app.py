@@ -1,9 +1,9 @@
 from flask import Flask, render_template, request
 import pickle
-
+from dotenv import dotenv_values
 
 import openai
-openai.api_key = "sk-jVFD5HAxHNVJFb9RhPr9T3BlbkFJn7pYdxGowsceumcq"
+openai.api_key = dotenv_values(".env")["OPEN_AI_KEY"]
 # audio_file = open("uploadmp3/run.mp3", "rb")
 # transcript = openai.Audio.transcribe("whisper-1", audio_file)
 
